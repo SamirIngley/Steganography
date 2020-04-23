@@ -10,7 +10,7 @@ def decode_image(file_location):
     
     decoded_image = Image.new("RGB", encoded_image.size)
     pixels = decoded_image.load()
-    
+
     # To get RGB values for an image at X, Y:
     for i in range(x_size):
         for j in range(y_size):
@@ -18,7 +18,7 @@ def decode_image(file_location):
                 pixels[i, j] = (255, 255, 255)
             elif int(bin(red_channel.getpixel((i, j)))[-1]) == 1:
                 pixels[i, j] = (0, 0, 0)
-    decoded_image.save("decoded_image.png")
+    decoded_image.save("images/decoded_image.png")
 
 
 
